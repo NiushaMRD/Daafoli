@@ -1,0 +1,223 @@
+"use client";
+
+import Link from "next/link";
+import {
+  Send,
+  Phone,
+  MapPin,
+  Mail,
+} from "lucide-react";
+
+import {
+  FaInstagram,
+} from "react-icons/fa";
+
+
+const footerLinks = [
+  {
+    title: "خرید",
+    links: [
+      {
+        title: "همه محصولات",
+        href: "/products",
+      },
+      {
+        title: "لوازم آرایشی",
+        href: "/products/makeup",
+      },
+      {
+        title: "مراقبت پوست و مو",
+        href: "/products/skincare",
+      },
+      {
+        title: "عطر و ادکلن",
+        href: "/products/perfume",
+      },
+    ],
+  },
+  {
+    title: "دافولی",
+    links: [
+      {
+        title: "درباره ما",
+        href: "/about",
+      },
+      {
+        title: "تماس با ما",
+        href: "/contact",
+      },
+      {
+        title: "مجله زیبایی",
+        href: "/blog",
+      },
+      {
+        title: "سوالات متداول",
+        href: "/faq",
+      },
+    ],
+  },
+  {
+    title: "خدمات مشتریان",
+    links: [
+      {
+        title: "پیگیری سفارش",
+        href: "/orders",
+      },
+      {
+        title: "شرایط بازگشت کالا",
+        href: "/return-policy",
+      },
+      {
+        title: "قوانین و مقررات",
+        href: "/rules",
+      },
+      {
+        title: "حریم خصوصی",
+        href: "/privacy",
+      },
+    ],
+  },
+];
+
+
+export default function Footer() {
+  return (
+    <footer className="bg-[#111111] text-white">
+
+
+      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 md:grid-cols-2 lg:grid-cols-4">
+
+
+        {/* BRAND */}
+
+        <div>
+
+          <h2 className="mb-4 text-3xl font-extrabold">
+            Daafoli
+          </h2>
+
+
+          <p className="mb-6 leading-8 text-[#E5E5E5]">
+            فروشگاه آنلاین محصولات آرایشی، مراقبت پوست و مو،
+            عطر و اکسسوری.
+            <br />
+            با همیشه داف باشید.
+          </p>
+
+
+          <div className="flex gap-3">
+
+            <Link
+              href="#"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition hover:bg-[#D96C8A]"
+            >
+<FaInstagram size={20} />            </Link>
+
+
+            <Link
+              href="#"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition hover:bg-[#D96C8A]"
+            >
+              <Send size={20} />
+            </Link>
+
+          </div>
+
+        </div>
+
+
+        {/* LINKS */}
+
+        {footerLinks.map((column) => (
+
+          <div key={column.title}>
+
+            <h3 className="mb-5 text-lg font-bold">
+              {column.title}
+            </h3>
+
+
+            <ul className="space-y-4">
+
+              {column.links.map((link) => (
+
+                <li key={link.title}>
+
+                  <Link
+                    href={link.href}
+                    className="text-[#E5E5E5] transition hover:text-[#D96C8A]"
+                  >
+                    {link.title}
+                  </Link>
+
+                </li>
+
+              ))}
+
+            </ul>
+
+          </div>
+
+        ))}
+
+
+      </div>
+
+
+      {/* CONTACT */}
+
+      <div className="border-t border-white/10">
+
+        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-8 text-sm text-[#E5E5E5] md:flex-row md:items-center md:justify-between">
+
+
+          <div className="flex items-center gap-2">
+
+            <Phone size={18} />
+
+            <span>
+              ۰۲۱-۱۲۳۴۵۶۷۸
+            </span>
+
+          </div>
+
+
+          <div className="flex items-center gap-2">
+
+            <Mail size={18} />
+
+            <span>
+              info@daafoli.com
+            </span>
+
+          </div>
+
+
+          <div className="flex items-center gap-2">
+
+            <MapPin size={18} />
+
+            <span>
+              ارسال به سراسر کشور
+            </span>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+      {/* COPYRIGHT */}
+
+      <div className="border-t border-white/10 py-5 text-center text-sm text-[#E5E5E5]">
+
+        © 2026 Daafoli. تمامی حقوق محفوظ است.
+
+      </div>
+
+
+    </footer>
+  );
+}
