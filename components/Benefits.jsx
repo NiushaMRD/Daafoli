@@ -11,7 +11,7 @@ import {
 const benefits = [
   {
     id: 1,
-    title: "ضمان اصالت کالا",
+    title: "ضمانت اصالت کالا",
     text: "تمام محصولات از برندهای معتبر ارائه می‌شوند.",
     icon: ShieldCheck,
   },

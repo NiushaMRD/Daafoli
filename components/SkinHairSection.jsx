@@ -55,11 +55,11 @@ export default function SkinHairSection() {
 
           <div>
 
-            <h2 className="text-3xl font-extrabold text-[#111111]">
+            <h2 className="text-3xl font-extrabold text-[#d02084]">
               مراقبت پوست و مو
             </h2>
 
-            <p className="mt-2 text-[#444444]">
+            <p className="mt-2 text-[#873173]">
               روتین زیبایی خودت را با بهترین محصولات بساز
             </p>
 

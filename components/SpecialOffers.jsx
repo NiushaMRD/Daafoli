@@ -30,11 +30,11 @@ export default function SpecialOffers() {
 
         <div className="mb-10">
 
-          <h2 className="text-3xl font-extrabold text-[#111111]">
+          <h2 className="text-3xl font-extrabold text-[#dca0a0]">
             پیشنهادهای ویژه
           </h2>
 
-          <p className="mt-2 text-[#444444]">
+          <p className="mt-2 text-[#b27373]">
             بهترین فرصت‌ها برای خرید محصولات محبوب
           </p>
 

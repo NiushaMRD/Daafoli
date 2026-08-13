@@ -10,7 +10,7 @@ const articles = [
     description:
       "راهنمای انتخاب محصولات مراقبت پوست بر اساس نوع پوست و نیازهای آن.",
     image: "/images/blog/blog1.jpg",
-    href: "/blog/skincare-routine",
+    href: "/magazine",
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const articles = [
     description:
       "چند تکنیک ساده برای داشتن یک آرایش زیبا و ماندگار.",
     image: "/images/blog/blog2.jpg",
-    href: "/blog/daily-makeup",
+    href: "/magazine",
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const articles = [
     description:
       "چطور رایحه‌ای انتخاب کنیم که با سبک ما هماهنگ باشد.",
     image: "/images/blog/blog3.jpg",
-    href: "/blog/perfume-guide",
+    href: "/magazine",
   },
 ];
 
@@ -53,7 +53,7 @@ export default function BeautyBlog() {
 
 
           <Link
-            href="/blog"
+            href="/magazine"
             className="hidden rounded-full border border-[#D96C8A] px-6 py-3 font-medium text-[#D96C8A] transition duration-300 hover:bg-[#D96C8A] hover:text-white md:block"
           >
             مشاهده همه مقالات

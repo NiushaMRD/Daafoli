@@ -2,110 +2,146 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Heart,
-  ShoppingBag,
-  Star,
-} from "lucide-react";
+
+import { FaStar } from "react-icons/fa";
+import { FiHeart } from "react-icons/fi";
+import { BsCart3 } from "react-icons/bs";
 
 export default function ProductCard({ product }) {
   return (
-    <div className="group relative rounded-3xl bg-white p-4 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl">
-
-      {/* Discount */}
-
-      {product.discount && (
-        <span className="absolute right-5 top-5 z-10 rounded-full bg-[#D96C8A] px-3 py-1 text-xs font-bold text-white">
-          {product.discount}٪
-        </span>
-      )}
-
-
-      {/* Wishlist */}
-
-      <button
-        className="absolute left-5 top-5 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-white shadow-sm transition duration-300 hover:text-[#D96C8A]"
-      >
-        <Heart size={18} />
-      </button>
-
+    <div className="group overflow-hidden rounded-3xl border border-[#EFE7EA] bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
 
       {/* Image */}
 
       <Link href={`/products/${product.slug}`}>
 
-        <div className="relative mb-5 h-64 overflow-hidden rounded-2xl bg-[#FCFAFB]">
+        <div className="relative h-72 overflow-hidden bg-[#FAF7F8]">
 
           <Image
             src={product.image}
             alt={product.name}
             fill
-            className="object-contain transition duration-500 group-hover:scale-110"
+            className="object-contain p-6 transition duration-500 group-hover:scale-105"
           />
+
+          {/* Discount */}
+
+          {product.discount > 0 && (
+
+            <div className="absolute right-4 top-4 rounded-full bg-[#D96C8A] px-3 py-1 text-xs font-bold text-white">
+
+              %{product.discount}
+
+            </div>
+
+          )}
+
+          {/* Stock */}
+
+          {!product.stock && (
+
+            <div className="absolute left-4 top-4 rounded-full bg-red-500 px-3 py-1 text-xs font-bold text-white">
+
+              ناموجود
+
+            </div>
+
+          )}
 
         </div>
 
       </Link>
 
+      {/* Body */}
 
-      {/* Brand */}
+      <div className="p-5">
 
-      <p className="mb-2 text-sm text-[#777777]">
-        {product.brand}
-      </p>
+        <p className="mb-2 text-sm font-medium text-gray-800">
+          {product.brand}
+        </p>
 
+        <Link href={`/products/${product.slug}`}>
 
-      {/* Title */}
+          <h3 className="line-clamp-2 h-14 text-[16px] font-bold leading-7 text-black transition group-hover:text-[#D96C8A]">
 
-      <Link href={`/products/${product.slug}`}>
+            {product.name}
 
-        <h3 className="mb-3 line-clamp-2 min-h-12 text-base font-bold text-[#1F1F1F] transition hover:text-[#D96C8A]">
-          {product.name}
-        </h3>
+          </h3>
 
-      </Link>
+        </Link>
 
+        {/* Rating */}
 
-      {/* Rating */}
+        <div className="mt-4 flex items-center justify-between">
 
-      <div className="mb-4 flex items-center gap-1">
+          <div className="flex items-center gap-1">
 
-        <Star
-          size={16}
-          className="fill-[#F59E0B] text-[#F59E0B]"
-        />
+            <FaStar
+              size={15}
+              className="text-yellow-400"
+            />
 
-        <span className="text-sm font-medium text-[#333333]">
-          {product.rating}
-        </span>
+            <span className="text-sm font-semibold text-black">
+              {product.rating}
+            </span>
 
-      </div>
+          </div>
 
+          <span className="rounded-full bg-[#F8EDF1] px-3 py-1 text-xs text-[#D96C8A]">
 
-      {/* Price */}
+            {product.category}
 
-      <div className="flex items-center justify-between">
-
-        <div>
-
-          {product.oldPrice && (
-            <del className="block text-sm text-[#777777]">
-              {product.oldPrice} تومان
-            </del>
-          )}
-
-          <span className="text-lg font-extrabold text-[#111111]">
-            {product.price} تومان
           </span>
 
         </div>
 
+        {/* Price */}
 
-        <button
-          className="flex h-11 w-11 items-center justify-center rounded-full bg-[#D96C8A] text-white transition duration-300 hover:bg-[#C75577]"
-        >
-          <ShoppingBag size={20} />
-        </button>
+        <div className="mt-5">
+
+          {product.oldPrice && (
+
+            <p className="text-sm text-gray-400 line-through">
+
+              {product.oldPrice.toLocaleString("fa-IR")} تومان
+
+            </p>
+
+          )}
+
+          <p className="mt-1 text-xl font-extrabold text-[#111111]">
+
+            {product.price.toLocaleString("fa-IR")} تومان
+
+          </p>
+
+        </div>
+
+        {/* Buttons */}
+
+        <div className="mt-6 flex gap-3">
+
+          <button
+            className="flex h-12 flex-1 items-center justify-center rounded-full bg-[#D96C8A] font-semibold text-white transition hover:bg-[#C45A78]"
+          >
+
+            <BsCart3 size={20} />
+
+            <span className="mr-2">
+              افزودن
+            </span>
+
+          </button>
+
+          <button
+            className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-800 text-gray-800 transition hover:border-[#D96C8A] hover:text-[#D96C8A]"
+          >
+
+            <FiHeart size={20} />
+
+          </button>
+
+        </div>
 
       </div>
 

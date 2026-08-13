@@ -23,10 +23,11 @@ const menuItems = [
   {
     title: "برندها",
     href: "/brands",
+    mega: true,
   },
   {
     title: "مجله",
-    href: "/blog",
+    href: "/magazine",
   },
   {
     title: "درباره ما",
@@ -58,12 +59,12 @@ export default function Header() {
         className={`sticky top-0 z-50 w-full transition-all duration-300 ${
           isScrolled
             ? "bg-white/90 backdrop-blur-xl shadow-md"
-            : "bg-red-300"
+            : "bg-[#792038ce]"
         }`}
       >
         {/* TOP HEADER */}
 
-        <div className="border-b border-[#df9f95]">
+        <div className="border-b border-[#450909]">
           <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-8 px-5">
 
             {/* LOGO */}
@@ -86,7 +87,7 @@ export default function Header() {
                    دافولی
                   </h1>
 
-                  <p className="text-xs text-[#666]">
+                  <p className="text-xs text-[#0a0a0a]">
                     با ما همیشه داف باشید
                   </p>
 
@@ -121,7 +122,7 @@ export default function Header() {
 
             <div className="flex items-center gap-5">
 
-              <button className="relative transition duration-300 hover:text-[#D96C8A]">
+              <button className="relative transition duration-300 text-black hover:text-[#D96C8A]">
 
                 <Heart size={24} />
 
@@ -131,11 +132,11 @@ export default function Header() {
 
               </button>
 
-              <button className="transition duration-300 hover:text-[#D96C8A]">
+              <button className="transition duration-300  text-black hover:text-[#D96C8A]">
                 <User size={24} />
               </button>
 
-              <button className="relative transition duration-300 hover:text-[#D96C8A]">
+              <button className="relative transition duration-300  text-black hover:text-[#D96C8A]">
 
                 <ShoppingBag size={24} />
 
@@ -152,7 +153,7 @@ export default function Header() {
 
         {/* NAVBAR */}
 
-        <nav className="border-b border-[#E8DDE2] bg-red-300">
+        <nav className="border-b border-[#E8DDE2]  bg-[#792038ce]">
 
           <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5">
 
@@ -176,7 +177,7 @@ export default function Header() {
                     )}
                   </Link>
 
-                  <span className="absolute bottom-0 right-0 h-0.5 w-0 bg-[#D96C8A] transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute bottom-0 right-0 h-0.5 w-0 bg-[#600a0a] transition-all duration-300 group-hover:w-full"></span>
                 </li>
               ))}
 

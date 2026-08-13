@@ -98,11 +98,11 @@ export default function PerfumeAccessorySection() {
 
             <div>
 
-              <h2 className="text-3xl font-extrabold text-[#111111]">
+              <h2 className="text-3xl font-extrabold text-[#ee4572]">
                 عطر، ادکلن و اسپری
               </h2>
 
-              <p className="mt-2 text-[#444444]">
+              <p className="mt-2 text-[#f0adad]">
                 رایحه‌ای که شخصیت شما را کامل می‌کند
               </p>
 

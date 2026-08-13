@@ -58,11 +58,11 @@ export default function ProductsSection() {
 
           <div>
 
-            <h2 className="text-3xl font-extrabold text-[#111111]">
+            <h2 className="text-3xl font-extrabold text-[#e669c7]">
               پرفروش‌ترین محصولات
             </h2>
 
-            <p className="mt-2 text-[#444444]">
+            <p className="mt-2 text-[#eda9db]">
               محبوب‌ترین انتخاب‌های کاربران دافولی
             </p>
 
