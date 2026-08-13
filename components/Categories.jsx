@@ -44,7 +44,7 @@ export default function Categories() {
               دسته‌بندی محصولات
             </h2>
 
-            <p className="mt-2 text-[#deaeac]">
+            <p className="mt-2 pm text-[#deaeac]">
               هر چیزی که برای زیبایی نیاز دارید.
             </p>
 

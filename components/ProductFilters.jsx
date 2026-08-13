@@ -15,9 +15,18 @@ const brands = [
   "MAC",
   "Maybelline",
   "Neutrogena",
-  "The Ordinary",
   "Dior",
+  "The Ordinary",
   "La Roche-Posay",
+  "Gucci",
+  "KIKO",
+  "SHEGLAM",
+  "Louis Vuitton",
+  "Chanel",
+  "YSL",
+  "NIVEA",
+  "Catrice",
+  "L'Oréal",
 ];
 
 const ratings = [
@@ -264,7 +273,7 @@ export default function ProductFilters({
               onChange={(event) =>
                 setMinPrice(Number(event.target.value))
               }
-              className="h-11 w-full rounded-xl border border-[#E5E5E5] px-3 text-sm outline-none focus:border-[#D96C8A] text-black"
+              className="h-11 w-full rounded-xl border border-[#E5E5E5] px-3 text-sm text-black outline-none focus:border-[#D96C8A]"
               placeholder="۰"
             />
 
@@ -283,7 +292,7 @@ export default function ProductFilters({
               onChange={(event) =>
                 setMaxPrice(Number(event.target.value))
               }
-              className="h-11 w-full rounded-xl border border-[#E5E5E5] px-3 text-sm outline-none focus:border-[#D96C8A] text-black"
+              className="h-11 w-full rounded-xl border border-[#E5E5E5] px-3 text-sm text-black outline-none focus:border-[#D96C8A]"
               placeholder="۱۰,۰۰۰,۰۰۰"
             />
 

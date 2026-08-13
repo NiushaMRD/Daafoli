@@ -11,6 +11,16 @@ const brands = [
   { name: "The Ordinary", slug: "the-ordinary" },
   { name: "Dior", slug: "dior" },
   { name: "La Roche-Posay", slug: "la-roche-posay" },
+
+  { name: "Gucci", slug: "gucci" },
+  { name: "KIKO", slug: "kiko" },
+  { name: "SHEGLAM", slug: "sheglam" },
+  { name: "Louis Vuitton", slug: "louis-vuitton" },
+  { name: "Chanel", slug: "chanel" },
+  { name: "YSL", slug: "ysl" },
+  { name: "NIVEA", slug: "nivea" },
+  { name: "Catrice", slug: "catrice" },
+  { name: "L'Oréal", slug: "loreal" },
 ];
 
 export default function Brands() {
@@ -25,7 +35,10 @@ export default function Brands() {
   }, [search]);
 
   return (
-    <section className="mx-auto max-w-7xl px-5 py-16">
+    <section
+      dir="rtl"
+      className="mx-auto max-w-7xl px-5 py-16"
+    >
 
       {/* Header */}
 
@@ -104,6 +117,8 @@ export default function Brands() {
         ))}
 
       </div>
+
+      {/* Empty State */}
 
       {filteredBrands.length === 0 && (
 

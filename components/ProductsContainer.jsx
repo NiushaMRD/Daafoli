@@ -11,6 +11,7 @@ export default function ProductsContainer() {
   const searchParams = useSearchParams();
 
   const brandFromUrl = searchParams.get("brand");
+  const categoryFromUrl = searchParams.get("category");
 
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("همه");
@@ -22,7 +23,10 @@ export default function ProductsContainer() {
   const [maxPrice, setMaxPrice] = useState(10000000);
   const [sort, setSort] = useState("default");
 
-  // فعال کردن خودکار فیلتر برند از URL
+  /* =========================
+     URL → Brand Filter
+  ========================= */
+
   useEffect(() => {
     if (!brandFromUrl) {
       setBrand("همه");
@@ -33,17 +37,34 @@ export default function ProductsContainer() {
       (product) => product.brand === brandFromUrl
     );
 
-    if (brandExists) {
-      setBrand(brandFromUrl);
-    } else {
-      setBrand("همه");
-    }
+    setBrand(brandExists ? brandFromUrl : "همه");
   }, [brandFromUrl]);
+
+  /* =========================
+     URL → Category Filter
+  ========================= */
+
+  useEffect(() => {
+    if (!categoryFromUrl) {
+      setCategory("همه");
+      return;
+    }
+
+    const categoryExists = products.some(
+      (product) => product.category === categoryFromUrl
+    );
+
+    setCategory(categoryExists ? categoryFromUrl : "همه");
+  }, [categoryFromUrl]);
+
+  /* =========================
+     Filtering
+  ========================= */
 
   const filteredProducts = useMemo(() => {
     let result = [...products];
 
-    // جستجو
+    // Search
     if (search.trim()) {
       const value = search.trim().toLowerCase();
 
@@ -54,49 +75,49 @@ export default function ProductsContainer() {
       );
     }
 
-    // دسته‌بندی
+    // Category
     if (category !== "همه") {
       result = result.filter(
         (product) => product.category === category
       );
     }
 
-    // برند
+    // Brand
     if (brand !== "همه") {
       result = result.filter(
         (product) => product.brand === brand
       );
     }
 
-    // موجودی
+    // Stock
     if (inStock) {
       result = result.filter(
         (product) => product.stock === true
       );
     }
 
-    // تخفیف
+    // Discount
     if (onlyDiscounted) {
       result = result.filter(
         (product) => product.discount > 0
       );
     }
 
-    // امتیاز
+    // Rating
     if (minRating > 0) {
       result = result.filter(
         (product) => product.rating >= minRating
       );
     }
 
-    // قیمت
+    // Price
     result = result.filter(
       (product) =>
         product.price >= minPrice &&
         product.price <= maxPrice
     );
 
-    // مرتب‌سازی
+    // Sort
     switch (sort) {
       case "newest":
         result.sort(
@@ -152,6 +173,10 @@ export default function ProductsContainer() {
     maxPrice,
     sort,
   ]);
+
+  /* =========================
+     Reset Filters
+  ========================= */
 
   const resetFilters = () => {
     setSearch("");

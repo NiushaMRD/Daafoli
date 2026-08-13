@@ -4,24 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 
 const brands = [
-  {
-    id: 1,
-    name: "Maybelline",
-    image: "/images/brands/maybelline.png",
-  },
+
   {
     id: 2,
     name: "L'Oréal",
     image: "/images/brands/loreal.png",
   },
   {
-    id: 3,
-    name: "Catrice",
-    image: "/images/brands/catrice.png",
-  },
-  {
     id: 4,
-    name: "Nivea",
+    name: "NIVEA",
     image: "/images/brands/nivea.png",
   },
   {
@@ -30,40 +21,23 @@ const brands = [
     image: "/images/brands/ordinary.png",
   },
   {
-    id: 6,
-    name: "Dior",
-    image: "/images/brands/dior.png",
-  },
-  {
     id: 7,
-    name: "Shiglam",
+    name: "SHEGLAM",
     image: "/images/brands/shiglam.png",
   },
   {
     id: 8,
-    name: "Kiko",
+    name: "KIKO",
     image: "/images/brands/kiko.png",
   },
-  {
-    id: 9,
-    name: "Gucci",
-    image: "/images/brands/gucci.png",
-  },
-  {
-    id: 10,
-    name: "Louis Vuitton",
-    image: "/images/brands/louis-vuitton.png",
-  },
-  {
-    id: 11,
-    name: "Chanel",
-    image: "/images/brands/chanel.png",
-  },
-  {
-    id: 12,
-    name: "YSL",
+ 
+
+    {
+    id: 15,
+    name: "La Roche-Posay",
     image: "/images/brands/ysl.png",
   },
+
 ];
 
 export default function Brands() {
