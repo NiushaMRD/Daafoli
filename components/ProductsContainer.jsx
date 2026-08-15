@@ -23,9 +23,171 @@ export default function ProductsContainer() {
   const [maxPrice, setMaxPrice] = useState(10000000);
   const [sort, setSort] = useState("default");
 
-  /* =========================
+  /* =====================================================
+     Wishlist
+  ===================================================== */
+
+  const [wishlist, setWishlist] = useState([]);
+
+  useEffect(() => {
+    try {
+      const savedWishlist =
+        localStorage.getItem("daafoli_wishlist");
+
+      if (!savedWishlist) return;
+
+      const parsedWishlist =
+        JSON.parse(savedWishlist);
+
+      if (Array.isArray(parsedWishlist)) {
+        setWishlist(parsedWishlist);
+      }
+    } catch (error) {
+      console.error(
+        "خطا در خواندن Wishlist:",
+        error
+      );
+    }
+  }, []);
+
+  /* =====================================================
+     Toggle Wishlist
+  ===================================================== */
+
+  const toggleWishlist = (productId) => {
+    setWishlist((currentWishlist) => {
+      let newWishlist;
+
+      if (currentWishlist.includes(productId)) {
+        newWishlist = currentWishlist.filter(
+          (id) => id !== productId
+        );
+      } else {
+        newWishlist = [
+          ...currentWishlist,
+          productId,
+        ];
+      }
+
+      localStorage.setItem(
+        "daafoli_wishlist",
+        JSON.stringify(newWishlist)
+      );
+
+      window.dispatchEvent(
+        new Event("wishlistUpdated")
+      );
+
+      return newWishlist;
+    });
+  };
+
+  /* =====================================================
+     Cart
+  ===================================================== */
+
+  const [cart, setCart] = useState([]);
+
+  /* =====================================================
+     خواندن Cart
+  ===================================================== */
+
+  useEffect(() => {
+    try {
+      const savedCart =
+        localStorage.getItem("daafoli_cart");
+
+      if (!savedCart) {
+        setCart([]);
+        return;
+      }
+
+      const parsedCart =
+        JSON.parse(savedCart);
+
+      if (Array.isArray(parsedCart)) {
+        setCart(parsedCart);
+      }
+    } catch (error) {
+      console.error(
+        "خطا در خواندن Cart:",
+        error
+      );
+
+      setCart([]);
+    }
+  }, []);
+
+  /* =====================================================
+     Add To Cart
+  ===================================================== */
+
+  const addToCart = (productId) => {
+    setCart((currentCart) => {
+      const existingProduct = currentCart.find(
+        (item) => item.id === productId
+      );
+
+      if (existingProduct) {
+        return currentCart.map((item) =>
+          item.id === productId
+            ? {
+              ...item,
+              quantity: item.quantity + 1,
+            }
+            : item
+        );
+      }
+
+      return [
+        ...currentCart,
+        {
+          id: productId,
+          quantity: 1,
+        },
+      ];
+    });
+  };
+
+  /* =====================================================
+   ذخیره Cart + اطلاع‌رسانی به Header
+===================================================== */
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(
+        "daafoli_cart",
+        JSON.stringify(cart)
+      );
+
+      window.dispatchEvent(
+        new Event("cartUpdated")
+      );
+    } catch (error) {
+      console.error(
+        "خطا در ذخیره Cart:",
+        error
+      );
+    }
+  }, [cart]);
+
+  /* =====================================================
+     دریافت تعداد محصول در Cart
+  ===================================================== */
+
+  const getCartQuantity = (productId) => {
+    const cartItem = cart.find(
+      (item) => item.id === productId
+    );
+
+    return cartItem
+      ? cartItem.quantity
+      : 0;
+  };
+
+  /* =====================================================
      URL → Brand Filter
-  ========================= */
+  ===================================================== */
 
   useEffect(() => {
     if (!brandFromUrl) {
@@ -34,15 +196,20 @@ export default function ProductsContainer() {
     }
 
     const brandExists = products.some(
-      (product) => product.brand === brandFromUrl
+      (product) =>
+        product.brand === brandFromUrl
     );
 
-    setBrand(brandExists ? brandFromUrl : "همه");
+    setBrand(
+      brandExists
+        ? brandFromUrl
+        : "همه"
+    );
   }, [brandFromUrl]);
 
-  /* =========================
+  /* =====================================================
      URL → Category Filter
-  ========================= */
+  ===================================================== */
 
   useEffect(() => {
     if (!categoryFromUrl) {
@@ -51,101 +218,131 @@ export default function ProductsContainer() {
     }
 
     const categoryExists = products.some(
-      (product) => product.category === categoryFromUrl
+      (product) =>
+        product.category ===
+        categoryFromUrl
     );
 
-    setCategory(categoryExists ? categoryFromUrl : "همه");
+    setCategory(
+      categoryExists
+        ? categoryFromUrl
+        : "همه"
+    );
   }, [categoryFromUrl]);
 
-  /* =========================
+  /* =====================================================
      Filtering
-  ========================= */
+  ===================================================== */
 
   const filteredProducts = useMemo(() => {
     let result = [...products];
 
-    // Search
+    /* Search */
+
     if (search.trim()) {
-      const value = search.trim().toLowerCase();
+      const value =
+        search.trim().toLowerCase();
 
       result = result.filter(
         (product) =>
-          product.name.toLowerCase().includes(value) ||
-          product.brand.toLowerCase().includes(value)
+          product.name
+            .toLowerCase()
+            .includes(value) ||
+          product.brand
+            .toLowerCase()
+            .includes(value)
       );
     }
 
-    // Category
+    /* Category */
+
     if (category !== "همه") {
       result = result.filter(
-        (product) => product.category === category
+        (product) =>
+          product.category === category
       );
     }
 
-    // Brand
+    /* Brand */
+
     if (brand !== "همه") {
       result = result.filter(
-        (product) => product.brand === brand
+        (product) =>
+          product.brand === brand
       );
     }
 
-    // Stock
+    /* Stock */
+
     if (inStock) {
       result = result.filter(
-        (product) => product.stock === true
+        (product) =>
+          product.stock === true
       );
     }
 
-    // Discount
+    /* Discount */
+
     if (onlyDiscounted) {
       result = result.filter(
-        (product) => product.discount > 0
+        (product) =>
+          product.discount > 0
       );
     }
 
-    // Rating
+    /* Rating */
+
     if (minRating > 0) {
       result = result.filter(
-        (product) => product.rating >= minRating
+        (product) =>
+          product.rating >= minRating
       );
     }
 
-    // Price
+    /* Price */
+
     result = result.filter(
       (product) =>
         product.price >= minPrice &&
         product.price <= maxPrice
     );
 
-    // Sort
+    /* Sort */
+
     switch (sort) {
       case "newest":
         result.sort(
-          (a, b) => Number(b.isNew) - Number(a.isNew)
+          (a, b) =>
+            Number(b.isNew) -
+            Number(a.isNew)
         );
         break;
 
       case "cheapest":
         result.sort(
-          (a, b) => a.price - b.price
+          (a, b) =>
+            a.price - b.price
         );
         break;
 
       case "expensive":
         result.sort(
-          (a, b) => b.price - a.price
+          (a, b) =>
+            b.price - a.price
         );
         break;
 
       case "rating":
         result.sort(
-          (a, b) => b.rating - a.rating
+          (a, b) =>
+            b.rating - a.rating
         );
         break;
 
       case "discount":
         result.sort(
-          (a, b) => b.discount - a.discount
+          (a, b) =>
+            b.discount - a.discount
         );
         break;
 
@@ -174,9 +371,9 @@ export default function ProductsContainer() {
     sort,
   ]);
 
-  /* =========================
+  /* =====================================================
      Reset Filters
-  ========================= */
+  ===================================================== */
 
   const resetFilters = () => {
     setSearch("");
@@ -190,6 +387,10 @@ export default function ProductsContainer() {
     setSort("default");
   };
 
+  /* =====================================================
+     Render
+  ===================================================== */
+
   return (
     <div className="grid gap-8 lg:grid-cols-[260px_1fr]">
 
@@ -201,7 +402,9 @@ export default function ProductsContainer() {
         inStock={inStock}
         setInStock={setInStock}
         onlyDiscounted={onlyDiscounted}
-        setOnlyDiscounted={setOnlyDiscounted}
+        setOnlyDiscounted={
+          setOnlyDiscounted
+        }
         minRating={minRating}
         setMinRating={setMinRating}
         minPrice={minPrice}
@@ -217,6 +420,17 @@ export default function ProductsContainer() {
         setSearch={setSearch}
         sort={sort}
         setSort={setSort}
+
+        /* Wishlist */
+
+        wishlist={wishlist}
+        toggleWishlist={toggleWishlist}
+
+        /* Cart */
+
+        cart={cart}
+        getCartQuantity={getCartQuantity}
+        onAddToCart={addToCart}
       />
 
     </div>

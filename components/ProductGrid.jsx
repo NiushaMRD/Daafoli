@@ -3,12 +3,21 @@
 import { Search, SlidersHorizontal } from "lucide-react";
 import ProductCard from "./ProductCard";
 
+
 export default function ProductGrid({
   products,
   search,
   setSearch,
   sort,
   setSort,
+
+  // Wishlist
+  wishlist,
+  toggleWishlist,
+
+  // Cart
+  getCartQuantity,
+  onAddToCart,
 }) {
   return (
     <div className="min-w-0">
@@ -114,6 +123,16 @@ export default function ProductGrid({
             <ProductCard
               key={product.id}
               product={product}
+
+              // Wishlist
+              isWishlisted={wishlist.includes(product.id)}
+              onToggleWishlist={() =>
+                toggleWishlist(product.id)
+              }
+
+              // Cart
+              cartQuantity={getCartQuantity(product.id)}
+              onAddToCart={onAddToCart}
             />
 
           ))}
