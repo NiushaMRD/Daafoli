@@ -110,7 +110,7 @@ export default function PerfumeAccessorySection() {
 
 
             <Link
-              href="/products/perfume"
+              href="/products?category=عطر و ادکلن"
               className="hidden rounded-full border border-[#D96C8A] px-6 py-3 font-medium text-[#D96C8A] transition hover:bg-[#D96C8A] hover:text-white md:block"
             >
               مشاهده همه
@@ -159,7 +159,7 @@ export default function PerfumeAccessorySection() {
 
 
             <Link
-              href="/products/accessories"
+              href="/products?category=اکسسوری"
               className="hidden rounded-full border border-[#D96C8A] px-6 py-3 font-medium text-[#D96C8A] transition hover:bg-[#D96C8A] hover:text-white md:block"
             >
               مشاهده همه

@@ -15,21 +15,21 @@ const slides = [
     title: "زیبایی از اینجا شروع می‌شود",
     subtitle: "جدیدترین محصولات آرایشی و مراقبت پوست",
     button: "مشاهده محصولات",
-    image: "/images/hero/hero1.jpg",
+    image: "/d.jpg",
   },
   {
     id: 2,
     title: "تخفیف‌های ویژه دافولی",
     subtitle: "تا ۵۰٪ تخفیف روی برندهای منتخب",
     button: "خرید با تخفیف",
-    image: "/images/hero/hero2.jpg",
+    image: "/vv.jpg",
   },
   {
     id: 3,
     title: "برندهای محبوب دنیا",
     subtitle: "ایرانی و خارجی، همه در یک جا",
     button: "مشاهده برندها",
-    image: "/images/hero/hero3.jpg",
+    image: "/dd.jpg",
   },
 ];
 

@@ -198,7 +198,7 @@ export default function Header() {
       <header
         className={`sticky top-0 z-50 w-full transition-all duration-300 ${isScrolled
           ? "bg-white/90 backdrop-blur-xl shadow-md"
-          : "bg-[#792038ce]"
+          : "bg-[#e7a8b9ce]"
           }`}
       >
 
@@ -222,7 +222,7 @@ export default function Header() {
               <div className="flex items-center gap-3">
 
                 <Image
-                  src="/logo/logo.png"
+                  src="/ww.png"
                   alt="Daafoli"
                   width={48}
                   height={48}

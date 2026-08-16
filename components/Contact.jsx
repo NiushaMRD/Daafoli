@@ -296,7 +296,10 @@ export default function Contact() {
 
       {/* FAQ */}
 
-      <section className="px-5 py-20 md:py-28">
+     <section
+  id="faq"
+  className="px-5 py-20 md:py-28"
+>
 
         <div className="mx-auto max-w-4xl">
 

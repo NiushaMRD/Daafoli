@@ -67,7 +67,7 @@ export default function SkinHairSection() {
 
 
           <Link
-            href="/products"
+            href= "/products?category=مراقبت پوست و مو"
             className="hidden rounded-full border border-[#D96C8A] px-6 py-3 font-medium text-[#D96C8A] transition duration-300 hover:bg-[#D96C8A] hover:text-white md:block"
           >
             مشاهده همه

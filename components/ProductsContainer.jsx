@@ -29,6 +29,10 @@ export default function ProductsContainer() {
 
   const [wishlist, setWishlist] = useState([]);
 
+  /* =====================================================
+     خواندن Wishlist از localStorage
+  ===================================================== */
+
   useEffect(() => {
     try {
       const savedWishlist =
@@ -51,34 +55,43 @@ export default function ProductsContainer() {
   }, []);
 
   /* =====================================================
-     Toggle Wishlist
+     ذخیره Wishlist + اطلاع‌رسانی به Header
   ===================================================== */
 
-  const toggleWishlist = (productId) => {
-    setWishlist((currentWishlist) => {
-      let newWishlist;
-
-      if (currentWishlist.includes(productId)) {
-        newWishlist = currentWishlist.filter(
-          (id) => id !== productId
-        );
-      } else {
-        newWishlist = [
-          ...currentWishlist,
-          productId,
-        ];
-      }
-
+  useEffect(() => {
+    try {
       localStorage.setItem(
         "daafoli_wishlist",
-        JSON.stringify(newWishlist)
+        JSON.stringify(wishlist)
       );
 
       window.dispatchEvent(
         new Event("wishlistUpdated")
       );
+    } catch (error) {
+      console.error(
+        "خطا در ذخیره Wishlist:",
+        error
+      );
+    }
+  }, [wishlist]);
 
-      return newWishlist;
+  /* =====================================================
+     Toggle Wishlist
+  ===================================================== */
+
+  const toggleWishlist = (productId) => {
+    setWishlist((currentWishlist) => {
+      if (currentWishlist.includes(productId)) {
+        return currentWishlist.filter(
+          (id) => id !== productId
+        );
+      }
+
+      return [
+        ...currentWishlist,
+        productId,
+      ];
     });
   };
 
@@ -132,9 +145,9 @@ export default function ProductsContainer() {
         return currentCart.map((item) =>
           item.id === productId
             ? {
-              ...item,
-              quantity: item.quantity + 1,
-            }
+                ...item,
+                quantity: item.quantity + 1,
+              }
             : item
         );
       }
@@ -150,8 +163,8 @@ export default function ProductsContainer() {
   };
 
   /* =====================================================
-   ذخیره Cart + اطلاع‌رسانی به Header
-===================================================== */
+     ذخیره Cart + اطلاع‌رسانی به Header
+  ===================================================== */
 
   useEffect(() => {
     try {
@@ -219,8 +232,7 @@ export default function ProductsContainer() {
 
     const categoryExists = products.some(
       (product) =>
-        product.category ===
-        categoryFromUrl
+        product.category === categoryFromUrl
     );
 
     setCategory(
@@ -402,9 +414,7 @@ export default function ProductsContainer() {
         inStock={inStock}
         setInStock={setInStock}
         onlyDiscounted={onlyDiscounted}
-        setOnlyDiscounted={
-          setOnlyDiscounted
-        }
+        setOnlyDiscounted={setOnlyDiscounted}
         minRating={minRating}
         setMinRating={setMinRating}
         minPrice={minPrice}

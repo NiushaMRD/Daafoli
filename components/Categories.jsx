@@ -7,44 +7,49 @@ const categories = [
   {
     id: 1,
     title: "لوازم آرایشی",
-    image: "/images/categories/makeup.jpg",
-    href: "/products/makeup",
+    image: "/m22.jpg",
+    href: "/products?category=لوازم آرایشی",
   },
   {
     id: 2,
     title: "مراقبت پوست و مو",
-    image: "/images/categories/skincare.jpg",
-    href: "/products/skincare",
+    image: "/s11.jpg",
+    href: "/products?category=مراقبت پوست و مو",
   },
   {
     id: 3,
     title: "عطر و ادکلن",
-    image: "/images/categories/perfume.jpg",
-    href: "/products/perfume",
+    image: "/p11.jpg",
+    href: "/products?category=عطر و ادکلن",
   },
   {
     id: 4,
     title: "اکسسوری",
-    image: "/images/categories/accessories.jpg",
-    href: "/products/accessories",
+    image: "/a1.jpg",
+    href: "/products?category=اکسسوری",
   },
 ];
 
 export default function Categories() {
   return (
-    <section className="py-16">
+    <section
+      dir="rtl"
+      className="py-16"
+    >
 
       <div className="mx-auto max-w-7xl px-5">
+
+        {/* Header */}
 
         <div className="mb-10 flex items-center justify-between">
 
           <div>
 
-            <h2 className="text-3xl font-extrabold text-[#d68f8f]">
+            <h2 className="text-3xl font-extrabold text-[#D68F8F]">
               دسته‌بندی محصولات
             </h2>
 
-            <p className="mt-2 pm text-[#deaeac]">
+            <p className="mt-2 text-[#DEAEAC]">
               هر چیزی که برای زیبایی نیاز دارید.
             </p>
 
@@ -58,6 +63,8 @@ export default function Categories() {
           </Link>
 
         </div>
+
+        {/* Categories */}
 
         <div className="grid grid-cols-2 gap-5 lg:grid-cols-4">
 

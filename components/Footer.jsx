@@ -12,7 +12,6 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 
-
 const footerLinks = [
   {
     title: "خرید",
@@ -23,15 +22,15 @@ const footerLinks = [
       },
       {
         title: "لوازم آرایشی",
-        href: "/products/makeup",
+        href: "/products?category=لوازم آرایشی",
       },
       {
         title: "مراقبت پوست و مو",
-        href: "/products/skincare",
+        href: "/products?category=مراقبت پوست و مو",
       },
       {
         title: "عطر و ادکلن",
-        href: "/products/perfume",
+        href: "/products?category=عطر و ادکلن",
       },
     ],
   },
@@ -52,7 +51,7 @@ const footerLinks = [
       },
       {
         title: "سوالات متداول",
-        href: "/faq",
+        href: "/contact#faq",
       },
     ],
   },
@@ -79,23 +78,25 @@ const footerLinks = [
   },
 ];
 
-
 export default function Footer() {
   return (
     <footer className="bg-[#111111] text-white">
 
+      {/* =====================================================
+          MAIN FOOTER
+      ===================================================== */}
 
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 md:grid-cols-2 lg:grid-cols-4">
 
-
-        {/* BRAND */}
+        {/* =====================================================
+            BRAND
+        ===================================================== */}
 
         <div>
 
           <h2 className="mb-4 text-3xl font-extrabold">
             Daafoli
           </h2>
-
 
           <p className="mb-6 leading-8 text-[#E5E5E5]">
             فروشگاه آنلاین محصولات آرایشی، مراقبت پوست و مو،
@@ -104,29 +105,33 @@ export default function Footer() {
             با ما همیشه داف باشید.
           </p>
 
+          {/* SOCIAL */}
 
           <div className="flex gap-3">
 
-            <Link
+            <a
               href="#"
+              aria-label="اینستاگرام دافولی"
               className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition hover:bg-[#D96C8A]"
             >
-<FaInstagram size={20} />            </Link>
+              <FaInstagram size={20} />
+            </a>
 
-
-            <Link
+            <a
               href="#"
+              aria-label="تلگرام دافولی"
               className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition hover:bg-[#D96C8A]"
             >
               <Send size={20} />
-            </Link>
+            </a>
 
           </div>
 
         </div>
 
-
-        {/* LINKS */}
+        {/* =====================================================
+            FOOTER LINKS
+        ===================================================== */}
 
         {footerLinks.map((column) => (
 
@@ -135,7 +140,6 @@ export default function Footer() {
             <h3 className="mb-5 text-lg font-bold">
               {column.title}
             </h3>
-
 
             <ul className="space-y-4">
 
@@ -160,38 +164,43 @@ export default function Footer() {
 
         ))}
 
-
       </div>
 
-
-      {/* CONTACT */}
+      {/* =====================================================
+          CONTACT
+      ===================================================== */}
 
       <div className="border-t border-white/10">
 
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-8 text-sm text-[#E5E5E5] md:flex-row md:items-center md:justify-between">
 
+          {/* PHONE */}
 
-          <div className="flex items-center gap-2">
-
+          <a
+            href="tel:02112345678"
+            className="flex items-center gap-2 transition hover:text-[#D96C8A]"
+          >
             <Phone size={18} />
 
             <span>
               ۰۲۱-۱۲۳۴۵۶۷۸
             </span>
+          </a>
 
-          </div>
+          {/* EMAIL */}
 
-
-          <div className="flex items-center gap-2">
-
+          <a
+            href="mailto:info@daafoli.com"
+            className="flex items-center gap-2 transition hover:text-[#D96C8A]"
+          >
             <Mail size={18} />
 
             <span>
               info@daafoli.com
             </span>
+          </a>
 
-          </div>
-
+          {/* SHIPPING */}
 
           <div className="flex items-center gap-2">
 
@@ -203,20 +212,19 @@ export default function Footer() {
 
           </div>
 
-
         </div>
 
       </div>
 
-
-      {/* COPYRIGHT */}
+      {/* =====================================================
+          COPYRIGHT
+      ===================================================== */}
 
       <div className="border-t border-white/10 py-5 text-center text-sm text-[#E5E5E5]">
 
         © 2026 Daafoli. تمامی حقوق محفوظ است.
 
       </div>
-
 
     </footer>
   );
