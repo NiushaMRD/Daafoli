@@ -36,7 +36,7 @@ const createProduct = ({
   name,
   brand,
   category,
-  image: `/images/products/${image}`,
+  image: `/${image}`,
   price,
   oldPrice: discount
     ? Math.round(price / (1 - discount / 100))
@@ -49,7 +49,7 @@ const createProduct = ({
   bestseller,
   description: `${name} از برند ${brand} با کیفیت مناسب و طراحی جذاب برای استفاده روزمره.`,
   gallery: [
-    `/images/products/${image}`,
+    `/${image}`,
   ],
 });
 
@@ -102,29 +102,6 @@ export const products = [
     gallery: [
       "/images/products/product2.png",
       "/images/products/product2-2.png",
-    ],
-  },
-
-  {
-    id: 3,
-    slug: "dior-perfume",
-    name: "عطر زنانه دیور",
-    brand: "Dior",
-    category: "عطر و ادکلن",
-    image: "/images/products/product3.png",
-    price: 5200000,
-    oldPrice: 6200000,
-    discount: 15,
-    rating: 4.9,
-    stock: true,
-    featured: true,
-    isNew: false,
-    bestseller: true,
-    description:
-      "رایحه‌ای ماندگار و لوکس برای استفاده روزانه و مهمانی.",
-    gallery: [
-      "/images/products/product3.png",
-      "/images/products/product3-2.png",
     ],
   },
 
@@ -233,7 +210,7 @@ export const products = [
     brand: "SHEGLAM",
     category: "لوازم آرایشی",
     price: 890000,
-    image: "product9.png",
+    image: "1sh(4).jpg",
     discount: 10,
     isNew: true,
   }),
@@ -245,7 +222,7 @@ export const products = [
     brand: "KIKO",
     category: "لوازم آرایشی",
     price: 1100000,
-    image: "product10.png",
+    image: "1k(1).jpg",
   }),
 
   createProduct({
@@ -255,7 +232,7 @@ export const products = [
     brand: "Dior",
     category: "لوازم آرایشی",
     price: 3500000,
-    image: "product11.png",
+    image: "1d(10).jpg",
     discount: 15,
     featured: true,
   }),
@@ -267,7 +244,7 @@ export const products = [
     brand: "Chanel",
     category: "لوازم آرایشی",
     price: 3900000,
-    image: "product12.png",
+    image: "1c(10).jpg",
     rating: 4.9,
   }),
 
@@ -278,7 +255,7 @@ export const products = [
     brand: "YSL",
     category: "لوازم آرایشی",
     price: 4100000,
-    image: "product13.png",
+    image: "1y(2).jpg",
     discount: 10,
   }),
 
@@ -331,7 +308,7 @@ export const products = [
     brand: "SHEGLAM",
     category: "لوازم آرایشی",
     price: 850000,
-    image: "product18.png",
+    image: "1sh(5).jpg",
     isNew: true,
   }),
 
@@ -342,7 +319,7 @@ export const products = [
     brand: "KIKO",
     category: "لوازم آرایشی",
     price: 760000,
-    image: "product19.png",
+    image: "1k(4).jpg",
   }),
 
   createProduct({
@@ -352,7 +329,7 @@ export const products = [
     brand: "Gucci",
     category: "لوازم آرایشی",
     price: 4300000,
-    image: "product20.png",
+    image: "1g(1).jpg",
     rating: 4.9,
     featured: true,
   }),
@@ -364,7 +341,7 @@ export const products = [
     brand: "Louis Vuitton",
     category: "لوازم آرایشی",
     price: 5200000,
-    image: "product21.png",
+    image: "1l(7).jpg",
     discount: 10,
   }),
 
@@ -427,7 +404,7 @@ export const products = [
     brand: "SHEGLAM",
     category: "لوازم آرایشی",
     price: 940000,
-    image: "product27.png",
+    image: "1sh(2).jpg",
   }),
 
   createProduct({
@@ -437,7 +414,7 @@ export const products = [
     brand: "KIKO",
     category: "لوازم آرایشی",
     price: 920000,
-    image: "product28.png",
+    image: "1k(5).jpg",
   }),
 
   createProduct({
@@ -447,7 +424,7 @@ export const products = [
     brand: "Dior",
     category: "لوازم آرایشی",
     price: 4700000,
-    image: "product29.png",
+    image: "1d(11).jpg",
     rating: 4.9,
     discount: 10,
   }),
@@ -459,7 +436,7 @@ export const products = [
     brand: "Chanel",
     category: "لوازم آرایشی",
     price: 3600000,
-    image: "product30.png",
+    image: "1c(1).jpg",
     rating: 4.9,
   }),
 
@@ -761,7 +738,7 @@ export const products = [
     brand: "Dior",
     category: "عطر و ادکلن",
     price: 5800000,
-    image: "product58.png",
+    image: "1d(7).jpg",
     rating: 4.9,
     bestseller: true,
   }),
@@ -773,7 +750,7 @@ export const products = [
     brand: "Chanel",
     category: "عطر و ادکلن",
     price: 6200000,
-    image: "product59.png",
+    image: "1c(8).jpg",
     rating: 4.9,
   }),
 
@@ -784,7 +761,7 @@ export const products = [
     brand: "YSL",
     category: "عطر و ادکلن",
     price: 5400000,
-    image: "product60.png",
+    image: "1y(9).jpg",
     discount: 10,
   }),
 
@@ -795,7 +772,7 @@ export const products = [
     brand: "Gucci",
     category: "عطر و ادکلن",
     price: 5100000,
-    image: "product61.png",
+    image: "1g(8).jpg",
   }),
 
   createProduct({
@@ -805,7 +782,7 @@ export const products = [
     brand: "Louis Vuitton",
     category: "عطر و ادکلن",
     price: 8900000,
-    image: "product62.png",
+    image: "1l(1).jpg",
     rating: 4.9,
     featured: true,
   }),
@@ -817,7 +794,7 @@ export const products = [
     brand: "Dior",
     category: "عطر و ادکلن",
     price: 6100000,
-    image: "product63.png",
+    image: "1d(8).jpg",
   }),
 
   createProduct({
@@ -827,7 +804,7 @@ export const products = [
     brand: "Chanel",
     category: "عطر و ادکلن",
     price: 6500000,
-    image: "product64.png",
+    image: "1c(9).jpg",
     rating: 4.9,
     bestseller: true,
   }),
@@ -839,7 +816,7 @@ export const products = [
     brand: "YSL",
     category: "عطر و ادکلن",
     price: 5600000,
-    image: "product65.png",
+    image: "1y(7).jpg",
   }),
 
   createProduct({
@@ -849,7 +826,7 @@ export const products = [
     brand: "Gucci",
     category: "عطر و ادکلن",
     price: 4800000,
-    image: "product66.png",
+    image: "1g(9).jpg",
     discount: 15,
   }),
 
@@ -860,7 +837,7 @@ export const products = [
     brand: "Louis Vuitton",
     category: "عطر و ادکلن",
     price: 8200000,
-    image: "product67.png",
+    image: "1l(5).jpg",
   }),
 
   createProduct({
@@ -870,7 +847,7 @@ export const products = [
     brand: "Dior",
     category: "عطر و ادکلن",
     price: 5900000,
-    image: "product68.png",
+    image: "1d(9).jpg",
   }),
 
   createProduct({
@@ -880,7 +857,7 @@ export const products = [
     brand: "Chanel",
     category: "عطر و ادکلن",
     price: 6300000,
-    image: "product69.png",
+    image: "1c(2).jpg",
   }),
 
   createProduct({
@@ -890,7 +867,7 @@ export const products = [
     brand: "YSL",
     category: "عطر و ادکلن",
     price: 5300000,
-    image: "product70.png",
+    image: "1y(8).jpg",
   }),
 
   createProduct({
@@ -900,7 +877,7 @@ export const products = [
     brand: "Gucci",
     category: "عطر و ادکلن",
     price: 5000000,
-    image: "product71.png",
+    image: "1g(10).jpg",
   }),
 
   createProduct({
@@ -910,7 +887,7 @@ export const products = [
     brand: "Dior",
     category: "عطر و ادکلن",
     price: 5700000,
-    image: "product72.png",
+    image: "1d(4).jpg",
     discount: 10,
   }),
 
@@ -921,7 +898,7 @@ export const products = [
     brand: "Chanel",
     category: "عطر و ادکلن",
     price: 6800000,
-    image: "product73.png",
+    image: "1c(3).jpg",
     rating: 4.9,
   }),
 
@@ -932,7 +909,7 @@ export const products = [
     brand: "YSL",
     category: "عطر و ادکلن",
     price: 5200000,
-    image: "product74.png",
+    image: "1y(1).jpg",
   }),
 
   createProduct({
@@ -942,7 +919,7 @@ export const products = [
     brand: "Gucci",
     category: "عطر و ادکلن",
     price: 4700000,
-    image: "product75.png",
+    image: "1g(2).jpg",
   }),
 
   createProduct({
@@ -952,7 +929,7 @@ export const products = [
     brand: "Louis Vuitton",
     category: "عطر و ادکلن",
     price: 8500000,
-    image: "product76.png",
+    image: "1k(2).jpg",
   }),
 
   createProduct({
@@ -962,7 +939,7 @@ export const products = [
     brand: "Dior",
     category: "عطر و ادکلن",
     price: 6000000,
-    image: "product77.png",
+    image: "1d(3).jpg",
     bestseller: true,
   }),
 
@@ -973,7 +950,7 @@ export const products = [
     brand: "Chanel",
     category: "عطر و ادکلن",
     price: 5900000,
-    image: "product78.png",
+    image: "1c(4).jpg",
   }),
 
   createProduct({
@@ -983,7 +960,7 @@ export const products = [
     brand: "YSL",
     category: "عطر و ادکلن",
     price: 4800000,
-    image: "product79.png",
+    image: "1y(3).jpg",
   }),
 
   createProduct({
@@ -993,7 +970,7 @@ export const products = [
     brand: "Gucci",
     category: "عطر و ادکلن",
     price: 4900000,
-    image: "product80.png",
+    image: "1g(3).jpg",
   }),
 
   createProduct({
@@ -1003,7 +980,7 @@ export const products = [
     brand: "Dior",
     category: "عطر و ادکلن",
     price: 5500000,
-    image: "product81.png",
+    image: "1d(5).jpg",
   }),
 
   createProduct({
@@ -1013,7 +990,7 @@ export const products = [
     brand: "Chanel",
     category: "عطر و ادکلن",
     price: 6100000,
-    image: "product82.png",
+    image: "1c(5).jpg",
   }),
 
   createProduct({
@@ -1023,7 +1000,7 @@ export const products = [
     brand: "YSL",
     category: "عطر و ادکلن",
     price: 5100000,
-    image: "product83.png",
+    image: "1y(5).jpg",
   }),
 
   createProduct({
@@ -1033,7 +1010,7 @@ export const products = [
     brand: "Gucci",
     category: "عطر و ادکلن",
     price: 4600000,
-    image: "product84.png",
+    image: "1g(6).jpg",
   }),
 
   createProduct({
@@ -1043,7 +1020,7 @@ export const products = [
     brand: "Louis Vuitton",
     category: "عطر و ادکلن",
     price: 9000000,
-    image: "product85.png",
+    image: "1l(6).jpg",
     rating: 4.9,
   }),
 
@@ -1054,7 +1031,7 @@ export const products = [
     brand: "Dior",
     category: "عطر و ادکلن",
     price: 5400000,
-    image: "product86.png",
+    image: "1d(6).jpg",
   }),
 
   createProduct({
@@ -1064,7 +1041,7 @@ export const products = [
     brand: "Chanel",
     category: "عطر و ادکلن",
     price: 6300000,
-    image: "product87.png",
+    image: "1c(6).jpg",
   }),
 
   // =====================================================
@@ -1079,7 +1056,7 @@ export const products = [
     brand: "Gucci",
     category: "اکسسوری",
     price: 4200000,
-    image: "product88.png",
+    image: "1g(7).jpg",
     featured: true,
   }),
 
@@ -1090,7 +1067,7 @@ export const products = [
     brand: "Chanel",
     category: "اکسسوری",
     price: 2800000,
-    image: "product89.png",
+    image: "1c(7).jpg",
   }),
 
   createProduct({
@@ -1100,16 +1077,16 @@ export const products = [
     brand: "Dior",
     category: "اکسسوری",
     price: 3200000,
-    image: "product90.png",
+    image: "1d(2).jpg",
     rating: 4.9,
   }),
 
   createProduct({
     id: 91,
     slug: "kiko-hair-clip",
-    name: "کلیپس مو کیکو",
+    name: "سایه چشم  کیکو",
     brand: "KIKO",
-    category: "اکسسوری",
+    category: "لوازم آرایشی",
     price: 480000,
     image: "product91.png",
   }),
@@ -1117,9 +1094,9 @@ export const products = [
   createProduct({
     id: 92,
     slug: "sheglam-scarf",
-    name: "اسکارف طرح‌دار شیگلم",
+    name: " رژ لب شیگلم",
     brand: "SHEGLAM",
-    category: "اکسسوری",
+   category: "لوازم آرایشی",
     price: 650000,
     image: "product92.png",
   }),
@@ -1247,9 +1224,9 @@ export const products = [
   createProduct({
     id: 105,
     slug: "kiko-bracelet",
-    name: "دستبند مینیمال کیکو",
+    name: " رژ گونه کیکو",
     brand: "KIKO",
-    category: "اکسسوری",
+   category: "لوازم آرایشی",
     price: 580000,
     image: "product105.png",
   }),
@@ -1257,9 +1234,9 @@ export const products = [
   createProduct({
     id: 106,
     slug: "sheglam-earrings",
-    name: "گوشواره شیگلم",
+    name: "پرایمر شیگلم",
     brand: "SHEGLAM",
-    category: "اکسسوری",
+    category: "لوازم آرایشی",
     price: 620000,
     image: "product106.png",
   }),
