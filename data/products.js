@@ -1340,7 +1340,7 @@ export const products = [
   
 
   createProduct({
-    id: 116,
+    id: 121 ,
     slug: "chanel-hair band",
     name: "کش مو  ",
     brand: "Chanel",
@@ -1352,7 +1352,7 @@ export const products = [
   }),
 
    createProduct({
-    id: 116,
+    id: 117,
     slug: "ysl-hair band",
     name: "کش مو  ",
     brand: "YSL",
