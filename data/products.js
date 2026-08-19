@@ -929,7 +929,7 @@ export const products = [
     brand: "Louis Vuitton",
     category: "عطر و ادکلن",
     price: 8500000,
-    image: "1k(2).jpg",
+    image: "1l(4).jpg",
   }),
 
   createProduct({
@@ -1088,7 +1088,7 @@ export const products = [
     brand: "KIKO",
     category: "لوازم آرایشی",
     price: 480000,
-    image: "product91.png",
+    image: "1k(3).jpg",
   }),
 
   createProduct({
@@ -1098,7 +1098,7 @@ export const products = [
     brand: "SHEGLAM",
    category: "لوازم آرایشی",
     price: 650000,
-    image: "product92.png",
+    image: "1sh(3).jpg",
   }),
 
   createProduct({
@@ -1108,7 +1108,7 @@ export const products = [
     brand: "Louis Vuitton",
     category: "اکسسوری",
     price: 3500000,
-    image: "product93.png",
+    image: "1l(2).jpg",
   }),
 
   createProduct({
@@ -1118,87 +1118,85 @@ export const products = [
     brand: "YSL",
     category: "اکسسوری",
     price: 2900000,
-    image: "product94.png",
+    image: "1y(4).jpg",
   }),
 
   createProduct({
     id: 95,
-    slug: "nivea-hair-tie",
-    name: "کش موی فانتزی نیوآ",
-    brand: "NIVEA",
+    slug: "ysl-hair banding",
+    name: "کش موی فانتزی",
+    brand: "YSL",
     category: "اکسسوری",
     price: 280000,
-    image: "product95.png",
+    image: "1(26).jpg",
   }),
 
   createProduct({
     id: 96,
-    slug: "catrice-hair-clip",
-    name: "گیره مو Catrice",
-    brand: "Catrice",
+    slug: "dior-hair",
+    name: "گیره مو ",
+    brand: "Dior",
     category: "اکسسوری",
     price: 350000,
-    image: "product96.png",
+    image: "1(23).jpg",
   }),
 
   createProduct({
     id: 97,
-    slug: "loreal-headband",
-    name: "هدبند مو لورآل",
-    brand: "L'Oréal",
+    slug: "gucci-heels",
+    name: " کفش پاشنه بلند ",
+    brand: "Gucci",
     category: "اکسسوری",
     price: 420000,
-    image: "product97.png",
+    image: "1(10).jpg",
   }),
 
   createProduct({
     id: 98,
-    slug: "mac-makeup-bag",
-    name: "کیف لوازم آرایش مک",
-    brand: "MAC",
+    slug: "ysl-heels",
+    name: " کفش پاشنه بلند ",
+    brand: "YSL",
     category: "اکسسوری",
     price: 1250000,
-    image: "product98.png",
+    image: "1(16).jpg",
   }),
 
   createProduct({
     id: 99,
-    slug: "maybelline-makeup-bag",
-    name: "کیف آرایشی میبلین",
-    brand: "Maybelline",
+    slug: "chanel-heels",
+   name: " کفش پاشنه بلند ",
+    brand: "Chanel",
     category: "اکسسوری",
     price: 850000,
-    image: "product99.png",
+    image: "1(12).jpg",
   }),
 
-  createProduct({
+   createProduct({
     id: 100,
-    slug: "neutrogena-cosmetic-bag",
-    name: "کیف کوچک نوتروژینا",
-    brand: "Neutrogena",
+    slug: "lv-heels",
+   name: " کفش پاشنه بلند ",
+    brand: "Louis Vuitton",
     category: "اکسسوری",
-    price: 780000,
-    image: "product100.png",
+    price: 850000,
+    image: "1(11).jpg",
   }),
-
-  createProduct({
+    createProduct({
     id: 101,
-    slug: "ordinary-pouch",
-    name: "پوش آرایشی The Ordinary",
-    brand: "The Ordinary",
+    slug: "dior-heels",
+   name: " کفش پاشنه بلند ",
+    brand: "Dior",
     category: "اکسسوری",
-    price: 720000,
-    image: "product101.png",
+    price: 850000,
+    image: "1(14).jpg",
   }),
-
-  createProduct({
+    createProduct({
     id: 102,
-    slug: "la-roche-headband",
-    name: "هدبند مراقبت پوست",
-    brand: "La Roche-Posay",
+    slug: "chanel-bag",
+   name: "کیف زنانه ",
+    brand: "Chanel",
     category: "اکسسوری",
-    price: 390000,
-    image: "product102.png",
+    price: 850000,
+    image: "1(15).jpg",
   }),
 
   createProduct({
@@ -1208,7 +1206,7 @@ export const products = [
     brand: "Dior",
     category: "اکسسوری",
     price: 2700000,
-    image: "product103.png",
+    image: "1d(1).jpg",
   }),
 
   createProduct({
@@ -1218,7 +1216,7 @@ export const products = [
     brand: "Gucci",
     category: "اکسسوری",
     price: 3100000,
-    image: "product104.png",
+    image: "1g(5).jpg",
   }),
 
   createProduct({
@@ -1228,7 +1226,7 @@ export const products = [
     brand: "KIKO",
    category: "لوازم آرایشی",
     price: 580000,
-    image: "product105.png",
+    image: "1k(2).jpg",
   }),
 
   createProduct({
@@ -1238,7 +1236,7 @@ export const products = [
     brand: "SHEGLAM",
     category: "لوازم آرایشی",
     price: 620000,
-    image: "product106.png",
+    image: "1sh(1).jpg",
   }),
 
   createProduct({
@@ -1248,7 +1246,7 @@ export const products = [
     brand: "Chanel",
     category: "اکسسوری",
     price: 3000000,
-    image: "product107.png",
+    image: "1c(12).jpg",
     rating: 4.9,
   }),
 
@@ -1259,7 +1257,7 @@ export const products = [
     brand: "YSL",
     category: "اکسسوری",
     price: 2700000,
-    image: "product108.png",
+    image: "1y(6).jpg",
   }),
 
   createProduct({
@@ -1269,87 +1267,100 @@ export const products = [
     brand: "Louis Vuitton",
     category: "اکسسوری",
     price: 3900000,
-    image: "product109.png",
+    image: "1l(3).jpg",
   }),
 
-  createProduct({
+
+    createProduct({
     id: 110,
-    slug: "nivea-scarf",
-    name: "اسکارف ساده نیوآ",
-    brand: "NIVEA",
+    slug: " ysl-bag",
+   name: "کیف زنانه ",
+    brand: "YSL",
     category: "اکسسوری",
-    price: 550000,
-    image: "product110.png",
+    price: 850000,
+    image: "1(17).jpg",
   }),
 
-  createProduct({
+    createProduct({
     id: 111,
-    slug: "catrice-earrings",
-    name: "گوشواره Catrice",
-    brand: "Catrice",
+    slug: "lv-bag",
+   name: "کیف زنانه ",
+    brand: "Louis Vuitton",
     category: "اکسسوری",
-    price: 520000,
-    image: "product111.png",
+    price: 850000,
+    image: "1(18).jpg",
   }),
 
-  createProduct({
+
+    createProduct({
     id: 112,
-    slug: "loreal-bracelet",
-    name: "دستبند لورآل",
-    brand: "L'Oréal",
+    slug: "dior-bag",
+   name: "کیف زنانه ",
+    brand: "Dior",
     category: "اکسسوری",
-    price: 480000,
-    image: "product112.png",
+    price: 850000,
+    image: "1(19).jpg",
   }),
 
-  createProduct({
+
+    createProduct({
     id: 113,
-    slug: "mac-hair-clip",
-    name: "کلیپس مو مک",
-    brand: "MAC",
+    slug: "gucci-bag",
+   name: "کیف زنانه ",
+    brand: "Gucci",
     category: "اکسسوری",
-    price: 420000,
-    image: "product113.png",
+    price: 850000,
+    image: "1(20).jpg",
   }),
 
-  createProduct({
+
+ createProduct({
     id: 114,
-    slug: "maybelline-hair-tie",
-    name: "کش مو میبلین",
-    brand: "Maybelline",
+    slug: "ysl-sunglasses",
+    name: "عینک آفتابی ",
+    brand: "YSL",
     category: "اکسسوری",
-    price: 290000,
-    image: "product114.png",
+    price: 4500000,
+    image: "1(21).jpg",
+    rating: 4.9,
+    bestseller: true,
   }),
 
   createProduct({
     id: 115,
-    slug: "neutrogena-headband",
-    name: "هدبند نوتروژینا",
-    brand: "Neutrogena",
+    slug: "dior-sunglasses",
+    name: "عینک آفتابی ",
+    brand: "Dior",
     category: "اکسسوری",
-    price: 350000,
-    image: "product115.png",
+    price: 4500000,
+    image: "1(24).jpg",
+    rating: 4.9,
+    bestseller: true,
   }),
+  
 
   createProduct({
     id: 116,
-    slug: "ordinary-bracelet",
-    name: "دستبند The Ordinary",
-    brand: "The Ordinary",
+    slug: "chanel-hair band",
+    name: "کش مو  ",
+    brand: "Chanel",
     category: "اکسسوری",
-    price: 520000,
-    image: "product116.png",
+    price: 4500000,
+    image: "1(22).jpg",
+    rating: 4.9,
+    bestseller: true,
   }),
 
-  createProduct({
-    id: 117,
-    slug: "la-roche-pouch",
-    name: "کیف کوچک La Roche-Posay",
-    brand: "La Roche-Posay",
+   createProduct({
+    id: 116,
+    slug: "ysl-hair band",
+    name: "کش مو  ",
+    brand: "YSL",
     category: "اکسسوری",
-    price: 690000,
-    image: "product117.png",
+    price: 4500000,
+    image: "1(25).jpg",
+    rating: 4.9,
+    bestseller: true,
   }),
 
   createProduct({
@@ -1359,7 +1370,7 @@ export const products = [
     brand: "Dior",
     category: "اکسسوری",
     price: 3600000,
-    image: "product118.png",
+    image: "1d(13).jpg",
     featured: true,
   }),
 
@@ -1370,7 +1381,7 @@ export const products = [
     brand: "Gucci",
     category: "اکسسوری",
     price: 1450000,
-    image: "product119.png",
+    image: "1g(4).jpg",
   }),
 
   createProduct({
@@ -1380,7 +1391,7 @@ export const products = [
     brand: "Chanel",
     category: "اکسسوری",
     price: 4500000,
-    image: "product120.png",
+    image: "1c(11).jpg",
     rating: 4.9,
     bestseller: true,
   }),
