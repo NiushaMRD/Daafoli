@@ -222,7 +222,7 @@ export default function Footer() {
 
       <div className="border-t border-white/10 py-5 text-center text-sm text-[#E5E5E5]">
 
-        © 2026 Daafoli. تمامی حقوق محفوظ است.
+         ♥ 2026 Daafoli ♥ با دافولی همیشه داف باشید  ♥
 
       </div>
 

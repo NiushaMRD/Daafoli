@@ -9,7 +9,7 @@ const newProducts = [
     name: "سرم ویتامین C روشن‌کننده پوست",
     brand: "The Ordinary",
     slug: "vitamin-c-serum",
-    image: "/images/products/new1.png",
+    image: "/vitamin-c-serum.jpg",
     price: "۱,۳۵۰,۰۰۰",
     rating: 4.8,
   },

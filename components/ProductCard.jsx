@@ -135,11 +135,10 @@ export default function ProductCard({
             type="button"
             onClick={() => onAddToCart(product.id)}
             disabled={!product.stock}
-            className={`relative flex h-12 flex-1 items-center justify-center rounded-full font-semibold text-white transition ${
-              !product.stock
+            className={`relative flex h-12 flex-1 items-center justify-center rounded-full font-semibold text-white transition ${!product.stock
                 ? "cursor-not-allowed bg-gray-400"
                 : "bg-[#D96C8A] hover:bg-[#C45A78]"
-            }`}
+              }`}
           >
 
             <BsCart3 size={20} />
@@ -166,11 +165,10 @@ export default function ProductCard({
                 ? "حذف از علاقه‌مندی‌ها"
                 : "افزودن به علاقه‌مندی‌ها"
             }
-            className={`flex h-12 w-12 items-center justify-center rounded-full border transition ${
-              isWishlisted
+            className={`flex h-12 w-12 items-center justify-center rounded-full border transition ${isWishlisted
                 ? "border-[#D96C8A] bg-[#D96C8A] text-white"
                 : "border-gray-800 text-gray-800 hover:border-[#D96C8A] hover:text-[#D96C8A]"
-            }`}
+              }`}
           >
 
             <FiHeart

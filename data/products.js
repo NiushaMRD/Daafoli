@@ -134,7 +134,7 @@ export const products = [
     name: "سرم ویتامین C",
     brand: "The Ordinary",
     category: "مراقبت پوست و مو",
-    image: "/images/products/new1.png",
+    image: "/vitamin-c-serum.jpg",
     price: 1350000,
     oldPrice: null,
     discount: 0,
@@ -452,7 +452,7 @@ export const products = [
     brand: "The Ordinary",
     category: "مراقبت پوست و مو",
     price: 1200000,
-    image: "product31.png",
+    image: "ordinary-hyaluronicacid.jpg",
     featured: true,
   }),
 
@@ -505,7 +505,7 @@ export const products = [
     brand: "The Ordinary",
     category: "مراقبت پوست و مو",
     price: 1100000,
-    image: "product36.png",
+    image: "4o.jpg",
     bestseller: true,
   }),
 
@@ -558,7 +558,7 @@ export const products = [
     brand: "The Ordinary",
     category: "مراقبت پوست و مو",
     price: 1250000,
-    image: "product41.png",
+    image: "ordinary-peeling.png",
     discount: 15,
   }),
 
@@ -611,7 +611,7 @@ export const products = [
     brand: "The Ordinary",
     category: "مراقبت پوست و مو",
     price: 1050000,
-    image: "product46.png",
+    image: "ordinary-caffeine.jpg",
   }),
 
   createProduct({
