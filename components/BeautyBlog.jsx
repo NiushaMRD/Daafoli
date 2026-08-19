@@ -9,7 +9,7 @@ const articles = [
     title: "چطور روتین پوستی مناسب خودمان را پیدا کنیم؟",
     description:
       "راهنمای انتخاب محصولات مراقبت پوست بر اساس نوع پوست و نیازهای آن.",
-    image: "/images/blog/blog1.jpg",
+    image: "/e(4).jpg",
     href: "/magazine",
   },
   {
@@ -17,7 +17,7 @@ const articles = [
     title: "ترفندهای آرایش روزانه طبیعی و جذاب",
     description:
       "چند تکنیک ساده برای داشتن یک آرایش زیبا و ماندگار.",
-    image: "/images/blog/blog2.jpg",
+    image: "/e(5).jpg",
     href: "/magazine",
   },
   {
@@ -25,7 +25,7 @@ const articles = [
     title: "راهنمای انتخاب عطر مناسب شخصیت شما",
     description:
       "چطور رایحه‌ای انتخاب کنیم که با سبک ما هماهنگ باشد.",
-    image: "/images/blog/blog3.jpg",
+    image: "/e(3).jpg",
     href: "/magazine",
   },
 ];

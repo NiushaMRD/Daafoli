@@ -30,7 +30,7 @@ const products = [
     name: "عطر زنانه دیور",
     brand: "Dior",
     slug: "dior-perfume",
-    image: "/images/products/product3.png",
+    image: "/ah(2).jpg",
     price: "۵,۲۰۰,۰۰۰",
     discount: 15,
     rating: 4.9,

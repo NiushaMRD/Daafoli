@@ -9,7 +9,7 @@ const offers = [
     title: "تخفیف ویژه آرایشی",
     subtitle: "تا ۴۰٪ تخفیف روی محصولات منتخب",
     button: "خرید کنید",
-    image: "/images/offers/makeup-offer.jpg",
+    image: "/ahh(1).jpg",
     href: "/products",
   },
   {
@@ -17,7 +17,7 @@ const offers = [
     title: "روتین مراقبت پوست",
     subtitle: "محصولات اصل برای زیبایی پوست شما",
     button: "مشاهده محصولات",
-    image: "/images/offers/skincare-offer.jpg",
+    image: "/ahh(3).jpg",
     href: "/products",
   },
 ];

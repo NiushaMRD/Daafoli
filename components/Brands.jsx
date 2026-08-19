@@ -8,34 +8,39 @@ const brands = [
   {
     id: 2,
     name: "L'Oréal",
-    image: "/images/brands/loreal.png",
+    image: "/n(151).jpg",
   },
   {
     id: 4,
     name: "NIVEA",
-    image: "/images/brands/nivea.png",
+    image: "/n(9).jpg",
+
   },
   {
     id: 5,
     name: "The Ordinary",
-    image: "/images/brands/ordinary.png",
+   image: "/n(8).jpg",
+
   },
   {
     id: 7,
     name: "SHEGLAM",
-    image: "/images/brands/shiglam.png",
+    image: "/n(111).jpg",
+
   },
   {
     id: 8,
     name: "KIKO",
-    image: "/images/brands/kiko.png",
+     image: "/n(117).jpg",
+
   },
  
 
     {
     id: 15,
     name: "La Roche-Posay",
-    image: "/images/brands/ysl.png",
+    image: "/n(71).jpg",
+
   },
 
 ];
