@@ -64,7 +64,7 @@ export const products = [
     name: "رژ لب مات مک",
     brand: "MAC",
     category: "لوازم آرایشی",
-    image: "/images/products/product1.png",
+    image: "/mac-matte-lipstick.jpeg",
     price: 1450000,
     oldPrice: 1800000,
     discount: 20,
@@ -76,9 +76,9 @@ export const products = [
     description:
       "رژ لب مات با ماندگاری بالا، بافت سبک و بدون ایجاد خشکی روی لب.",
     gallery: [
-      "/images/products/product1.png",
-      "/images/products/product1-2.png",
-      "/images/products/product1-3.png",
+      "/mac-matte-lipstick.jpeg",
+      "/mac-matte-lipstick.jpeg",
+      "/mac-matte-lipstick.jpeg",
     ],
   },
 
@@ -88,7 +88,7 @@ export const products = [
     name: "کرم آبرسان نوتروژینا",
     brand: "Neutrogena",
     category: "مراقبت پوست و مو",
-    image: "/images/products/product2.png",
+    image: "/neutrogena-moisturizer.jpeg",
     price: 850000,
     oldPrice: null,
     discount: 0,
@@ -100,8 +100,8 @@ export const products = [
     description:
       "کرم آبرسان مناسب انواع پوست با جذب سریع.",
     gallery: [
-      "/images/products/product2.png",
-      "/images/products/product2-2.png",
+      "/neutrogena-moisturizer.jpeg",
+      "/neutrogena-moisturizer.jpeg",
     ],
   },
 
@@ -111,7 +111,7 @@ export const products = [
     name: "ریمل حجم دهنده میبلین",
     brand: "Maybelline",
     category: "لوازم آرایشی",
-    image: "/images/products/product4.png",
+    image: "/maybelline-mascara.jpeg",
     price: 950000,
     oldPrice: null,
     discount: 0,
@@ -123,8 +123,8 @@ export const products = [
     description:
       "ریمل حجم‌دهنده با ماندگاری بالا و بدون ریزش.",
     gallery: [
-      "/images/products/product4.png",
-      "/images/products/product4-2.png",
+      "/maybelline-mascara.jpeg",
+      "/maybelline-mascara.jpeg",
     ],
   },
 
@@ -146,8 +146,8 @@ export const products = [
     description:
       "سرم روشن‌کننده پوست با ویتامین C خالص.",
     gallery: [
-      "/images/products/new1.png",
-      "/images/products/new1-2.png",
+      "/vitamin-c-serum.jpg",
+      "/vitamin-c-serum.jpg",
     ],
   },
 
@@ -157,7 +157,7 @@ export const products = [
     name: "ضد آفتاب پوست چرب",
     brand: "La Roche-Posay",
     category: "مراقبت پوست و مو",
-    image: "/images/products/skin2.png",
+    image: "/la-roche-posay-sunscreen.jpeg",
     price: 1200000,
     oldPrice: 1400000,
     discount: 15,
@@ -169,8 +169,8 @@ export const products = [
     description:
       "ضد آفتاب فاقد چربی با SPF50.",
     gallery: [
-      "/images/products/skin2.png",
-      "/images/products/skin2-2.png",
+      "/la-roche-posay-sunscreen.jpeg",
+      "/la-roche-posay-sunscreen.jpeg",
     ],
   },
 
@@ -186,7 +186,7 @@ export const products = [
     brand: "Maybelline",
     category: "لوازم آرایشی",
     price: 1250000,
-    image: "product7.png",
+    image: "maybelline-fit-me-foundation.jpeg",
     discount: 10,
     bestseller: true,
   }),
@@ -198,7 +198,7 @@ export const products = [
     brand: "MAC",
     category: "لوازم آرایشی",
     price: 3200000,
-    image: "product8.png",
+    image: "mac-studio-fix.jpeg",
     rating: 4.9,
     discount: 15,
   }),
@@ -266,7 +266,7 @@ export const products = [
     brand: "L'Oréal",
     category: "لوازم آرایشی",
     price: 980000,
-    image: "product14.png",
+    image: "loreal-mascara.jpeg",
   }),
 
   createProduct({
@@ -276,7 +276,7 @@ export const products = [
     brand: "Catrice",
     category: "لوازم آرایشی",
     price: 720000,
-    image: "product15.png",
+    image: "catrice-concealer.jpeg",
     discount: 10,
   }),
 
@@ -287,7 +287,7 @@ export const products = [
     brand: "MAC",
     category: "لوازم آرایشی",
     price: 2800000,
-    image: "product16.png",
+    image: "mac-eyeshadow.jpeg",
     featured: true,
   }),
 
@@ -298,7 +298,7 @@ export const products = [
     brand: "Maybelline",
     category: "لوازم آرایشی",
     price: 790000,
-    image: "product17.png",
+    image: "maybelline-concealer.jpeg",
   }),
 
   createProduct({
@@ -352,7 +352,7 @@ export const products = [
     brand: "NIVEA",
     category: "لوازم آرایشی",
     price: 350000,
-    image: "product22.png",
+    image: "nivea-lip-balm.jpeg",
   }),
 
   createProduct({
@@ -362,7 +362,7 @@ export const products = [
     brand: "L'Oréal",
     category: "لوازم آرایشی",
     price: 1150000,
-    image: "product23.png",
+    image: "loreal-foundation.jpeg",
     discount: 10,
   }),
 
@@ -373,7 +373,7 @@ export const products = [
     brand: "Catrice",
     category: "لوازم آرایشی",
     price: 680000,
-    image: "product24.png",
+    image: "catrice-blush.jpeg",
   }),
 
   createProduct({
@@ -383,7 +383,7 @@ export const products = [
     brand: "Maybelline",
     category: "لوازم آرایشی",
     price: 580000,
-    image: "product25.png",
+    image: "maybelline-eyeliner.jpeg",
   }),
 
   createProduct({
@@ -393,7 +393,7 @@ export const products = [
     brand: "MAC",
     category: "لوازم آرایشی",
     price: 1900000,
-    image: "product26.png",
+    image: "mac-mascara.jpeg",
     rating: 4.8,
   }),
 
@@ -463,7 +463,7 @@ export const products = [
     brand: "Neutrogena",
     category: "مراقبت پوست و مو",
     price: 780000,
-    image: "product32.png",
+    image: "neutrogena-cleanser.jpeg",
   }),
 
   createProduct({
@@ -473,7 +473,7 @@ export const products = [
     brand: "NIVEA",
     category: "مراقبت پوست و مو",
     price: 620000,
-    image: "product33.png",
+    image: "nivea-moisturizer.jpeg",
   }),
 
   createProduct({
@@ -483,7 +483,7 @@ export const products = [
     brand: "L'Oréal",
     category: "مراقبت پوست و مو",
     price: 950000,
-    image: "product34.png",
+    image: "loreal-hair-mask.jpeg",
     discount: 10,
   }),
 
@@ -494,7 +494,7 @@ export const products = [
     brand: "La Roche-Posay",
     category: "مراقبت پوست و مو",
     price: 1350000,
-    image: "product35.png",
+    image: "la-roche-cleanser.jpeg",
     rating: 4.9,
   }),
 
@@ -516,7 +516,7 @@ export const products = [
     brand: "Neutrogena",
     category: "مراقبت پوست و مو",
     price: 980000,
-    image: "product37.png",
+    image: "neutrogena-eye-cream.jpeg",
   }),
 
   createProduct({
@@ -526,7 +526,7 @@ export const products = [
     brand: "NIVEA",
     category: "مراقبت پوست و مو",
     price: 720000,
-    image: "product38.png",
+    image: "nivea-sunscreen.jpeg",
     discount: 10,
   }),
 
@@ -537,7 +537,7 @@ export const products = [
     brand: "L'Oréal",
     category: "مراقبت پوست و مو",
     price: 890000,
-    image: "product39.png",
+    image: "loreal-shampoo.jpeg",
   }),
 
   createProduct({
@@ -547,7 +547,7 @@ export const products = [
     brand: "La Roche-Posay",
     category: "مراقبت پوست و مو",
     price: 1450000,
-    image: "product40.png",
+    image: "la-roche-moisturizer.jpeg",
     rating: 4.8,
   }),
 
@@ -569,7 +569,7 @@ export const products = [
     brand: "Neutrogena",
     category: "مراقبت پوست و مو",
     price: 850000,
-    image: "product42.png",
+    image: "neutrogena-body-lotion.jpeg",
   }),
 
   createProduct({
@@ -579,7 +579,7 @@ export const products = [
     brand: "NIVEA",
     category: "مراقبت پوست و مو",
     price: 580000,
-    image: "product43.png",
+    image: "nivea-body-lotion.jpeg",
   }),
 
   createProduct({
@@ -589,7 +589,7 @@ export const products = [
     brand: "L'Oréal",
     category: "مراقبت پوست و مو",
     price: 780000,
-    image: "product44.png",
+    image: "loreal-conditioner.jpeg",
   }),
 
   createProduct({
@@ -599,7 +599,7 @@ export const products = [
     brand: "La Roche-Posay",
     category: "مراقبت پوست و مو",
     price: 1850000,
-    image: "product45.png",
+    image: "la-roche-serum.jpeg",
     rating: 4.9,
     featured: true,
   }),
@@ -621,7 +621,7 @@ export const products = [
     brand: "Neutrogena",
     category: "مراقبت پوست و مو",
     price: 450000,
-    image: "product47.png",
+    image: "neutrogena-hand-cream.jpeg",
   }),
 
   createProduct({
@@ -631,7 +631,7 @@ export const products = [
     brand: "NIVEA",
     category: "مراقبت پوست و مو",
     price: 490000,
-    image: "product48.png",
+    image: "nivea-face-wash.jpeg",
   }),
 
   createProduct({
@@ -641,7 +641,7 @@ export const products = [
     brand: "L'Oréal",
     category: "مراقبت پوست و مو",
     price: 1100000,
-    image: "product49.png",
+    image: "loreal-hair-serum.jpeg",
     discount: 10,
   }),
 
@@ -652,7 +652,7 @@ export const products = [
     brand: "La Roche-Posay",
     category: "مراقبت پوست و مو",
     price: 1250000,
-    image: "product50.png",
+    image: "la-roche-toner.jpeg",
   }),
 
   createProduct({
@@ -662,7 +662,7 @@ export const products = [
     brand: "The Ordinary",
     category: "مراقبت پوست و مو",
     price: 980000,
-    image: "product51.png",
+    image: "ordinary-moisturizer.png",
   }),
 
   createProduct({
@@ -672,7 +672,7 @@ export const products = [
     brand: "Neutrogena",
     category: "مراقبت پوست و مو",
     price: 1150000,
-    image: "product52.png",
+    image: "neutrogena-night-cream.jpeg",
   }),
 
   createProduct({
@@ -682,7 +682,7 @@ export const products = [
     brand: "NIVEA",
     category: "مراقبت پوست و مو",
     price: 650000,
-    image: "product53.png",
+    image: "nivea-night-cream.jpeg",
   }),
 
   createProduct({
@@ -692,7 +692,7 @@ export const products = [
     brand: "L'Oréal",
     category: "مراقبت پوست و مو",
     price: 920000,
-    image: "product54.png",
+    image: "loreal-hair-oil.jpeg",
   }),
 
   createProduct({
@@ -702,7 +702,7 @@ export const products = [
     brand: "La Roche-Posay",
     category: "مراقبت پوست و مو",
     price: 1300000,
-    image: "product55.png",
+    image: "la-roche-mask.jpeg",
     discount: 10,
   }),
 
@@ -713,7 +713,7 @@ export const products = [
     brand: "The Ordinary",
     category: "مراقبت پوست و مو",
     price: 1150000,
-    image: "product56.png",
+    image: "ordinary-squalane.jpg",
   }),
 
   createProduct({
@@ -723,7 +723,7 @@ export const products = [
     brand: "Neutrogena",
     category: "مراقبت پوست و مو",
     price: 990000,
-    image: "product57.png",
+    image: "neutrogena-gel-cream.jpeg",
   }),
 
   // =====================================================

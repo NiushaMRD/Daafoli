@@ -24,10 +24,10 @@ const newProducts = [
   },
   {
     id: 3,
-    name: "ماسک مو ترمیم‌کننده",
+    name: "شامپوترمیم‌کننده",
     brand: "L'Oréal",
     slug: "loreal-hair-mask",
-    image: "/images/products/new3.png",
+    image: "/loreal-shampoo.jpeg",
     price: "۹۵۰,۰۰۰",
     rating: 4.7,
   },
