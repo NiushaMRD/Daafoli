@@ -38,7 +38,7 @@ const perfumeProducts = [
     name: "اسپری بدن مردانه",
     brand: "Nivea",
     slug: "nivea-body-spray",
-    image: "/images/products/perfume4.png",
+    image: "/nivea-body-spray.jpeg",
     price: "۷۵۰,۰۰۰",
     rating: 4.6,
   },
